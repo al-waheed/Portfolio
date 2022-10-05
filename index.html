@@ -190,15 +190,15 @@
                 <figure class="snip1321">
                   <img src="assets/images/Screenshot 2022-09-16 at 11.29.31.jpg" alt="sq-sample26" />
                   <figcaption>
-                    <a href="https://arenadrip.netlify.app/" target="_blank" data-title="Caption"><i 
-                         class="fa fa-search"></i></a>
-                      <h4>ArenaDrip</h4>
-                      <span>ArenaDrip is an E-commerce web app that facilitate online transactions of goods and services
-                        through means of the transfer of information and funds over the internet.</span>
+                    <a href="https://arenadrip.netlify.app/" target="_blank" data-title="Caption"><i
+                        class="fa fa-search"></i></a>
+                    <h4>ArenaDrip</h4>
+                    <span>ArenaDrip is an E-commerce web app that facilitate online transactions of goods and services
+                      through means of the transfer of information and funds over the internet.</span>
                   </figcaption>
                 </figure>
               </div>
-              
+
               <div class="isotope-item" data-type="e-commerce">
                 <figure class="snip1321">
                   <img src="assets/images/Screenshot 2022-09-16 at 11.31.02.jpg" alt="sq-sample26" />
@@ -259,7 +259,7 @@
                     <span>quote-message app is a quote app, where you can randomly select a quote.</span>
                   </figcaption>
                 </figure>
-              </div> 
+              </div>
             </div>
           </div>
         </div>
@@ -275,7 +275,7 @@
         <div class="row">
           <div class="right-content">
             <div class="container">
-              <form id="contact" action="" method="post">
+              <form id="contact" action="" method="post" onsubmit="myFunction(),handleForm(e)">
                 <div class="row">
                   <div class="col-md-6">
                     <fieldset>
@@ -326,7 +326,6 @@
   <script src="assets/js/lightbox.js"></script>
   <script src="assets/js/custom.js"></script>
   <script>
-   
     $(".main-menu li:first").addClass("active");
 
     var showSection = function showSection(section, isAnimate) {
@@ -373,6 +372,16 @@
     $(window).scroll(function () {
       checkSection();
     });
+
+    function myFunction() {
+      alert("The form was submitted");
+    }
+
+    var form = document.getElementById("contact");
+      function handleForm(e) {
+      event.preventDefault();
+    }
+    form.addEventListener('submit', handleForm);
   </script>
 </body>
 
